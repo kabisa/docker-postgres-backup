@@ -1,0 +1,22 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: mysql-backup
+spec:
+  schedule: "2 4 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: mysql-backup
+            image: kabisa/docker-mysql-backup:0.1
+            envFrom:
+              - secretRef:
+                  name: mysql-backup-config
+            args:
+            - mysql_backup
+          restartPolicy: OnFailure
+
+# manual start:
+# kubectl create job --from=cronjob/mysql-backup backup-test-1
