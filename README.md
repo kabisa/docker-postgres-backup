@@ -7,6 +7,7 @@ You could use Kubernetes Cronjob for this.
 
 ## Example in docker
 
+```bash
 docker run \
     -e DB_NAME=mydb \
     -e DB_USERNAME=root \
@@ -19,3 +20,4 @@ docker run \
     -e AWS_S3_BUCKET=mybucket \
     -e AWS_S3_PATH=customerx \
     kabisa/docker-mysql-backup:0.1 mysql_backup
+```
