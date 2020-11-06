@@ -1,9 +1,8 @@
 # encoding: utf-8
 
-Model.new(:my_backup, 'My Backup') do
+Model.new(:mysql_backup, 'MySQL Backup') do
 
   database MySQL do |db|
-    db.name               = ENV["DB_NAME"]
     db.username           = ENV["DB_USERNAME"]
     db.password           = ENV["DB_PASSWORD"]
     db.host               = ENV["DB_HOST"]
