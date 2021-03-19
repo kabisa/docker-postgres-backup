@@ -1,6 +1,6 @@
-# docker-mysql-backup
+# docker-postgres-backup
 
-This container wil make a backup of your MySQL / MariaDB database.
+This container wil make a backup of your Postgres database.
 Note that this does not contain cron. 
 You could use Kubernetes Cronjob for this.
 
@@ -19,5 +19,5 @@ docker run \
     -e AWS_SECRET_ACCESS_KEY_ID=SOMETHING_ELSE \
     -e AWS_S3_BUCKET=mybucket \
     -e AWS_S3_PATH=customerx \
-    kabisa/docker-mysql-backup:0.1 mysql_backup
+    kabisa/docker-postgres-backup:0.1 postgres_backup
 ```
