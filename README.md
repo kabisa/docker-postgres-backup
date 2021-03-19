@@ -13,7 +13,7 @@ docker run \
     -e DB_USERNAME=root \
     -e DB_PASSWORD="" \
     -e DB_HOST=127.0.0.1 \
-    -e DB_PORT=3306 \
+    -e DB_PORT=5432 \
     -e AWS_REGION=eu-west-1 \
     -e AWS_ACCESS_KEY_ID=SOMETHING \
     -e AWS_SECRET_ACCESS_KEY_ID=SOMETHING_ELSE \
